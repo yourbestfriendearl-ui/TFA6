@@ -1,0 +1,40 @@
+{
+  "name": "earl-velasquez/swiftpos-tfa6",
+  "type": "project",
+  "description": "IT0049 TFA6 From Arrays to Eloquent by Earl Christian R. Velasquez DX31",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^13.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "test": [
+      "@php vendor/bin/phpunit"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
